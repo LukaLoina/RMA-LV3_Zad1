@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_broj_ptica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="100sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        tools:text="0"/>
+
+    <Button
+        android:id="@+id/btn_crna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="crna"
+        app:layout_constraintTop_toBottomOf="@+id/tv_broj_ptica"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintEnd_toStartOf="@id/guide_center"/>
+
+    <Button
+        android:id="@+id/btn_bijela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bijela"
+        app:layout_constraintTop_toBottomOf="@+id/tv_broj_ptica"
+        app:layout_constraintStart_toEndOf="@id/guide_center"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"/>
+
+    <Button
+        android:id="@+id/btn_plava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plava"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crna"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintEnd_toStartOf="@id/guide_center"/>
+
+    <Button
+        android:id="@+id/btn_crvena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="crvena"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bijela"
+        app:layout_constraintStart_toEndOf="@id/guide_center"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"/>
+
+    <Button
+        android:id="@+id/btn_zuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="žuta"
+        app:layout_constraintTop_toBottomOf="@+id/btn_plava"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintEnd_toStartOf="@id/guide_center"/>
+
+    <Button
+        android:id="@+id/btn_zelena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zelena"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crvena"
+        app:layout_constraintStart_toEndOf="@id/guide_center"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
